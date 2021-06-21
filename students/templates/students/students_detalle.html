@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Detalle student</title>
+</head>
+<body>
+    <div class="container-sm">
+        {%for value in sudentsId%}
+           <h2>Nombre: {{value.name}}</h2>
+           <h2>Apeliidos: {{value.surnames}}</h2>
+           <h2>Numero de identificación: {{value.identification_number}}</h2>
+        {%endfor%}
+        <a href="/students" class="btn btn-primary active" aria-current="page">Regresar a la lista</a>
+        <a href="/home" class="btn btn-primary active" aria-current="page">Regresar a inicio</a>
+    </div>
+</body>
+</html>
